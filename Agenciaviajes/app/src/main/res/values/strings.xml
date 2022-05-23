@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Agencia de viajes</string>
+    <string-array name="destinos">
+        <item>Hermosillo, Sonora</item>
+        <item>Mazatlan, Sinaloa</item>
+        <item>Culiacan, Sinaloa</item>
+        <item>Guadalajara, Jalisco</item>
+        <item>Guerrero, Chihuahua</item>
+        <item>San Blas, Nayarit</item>
+        <item>San Pedro Tlaquepaque, Jalisco</item>
+        <item>Zapopan, Jalisco</item>
+        <item>Tequila, Jalisco</item>
+    </string-array>
+
+    <string-array name="tipo">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>
