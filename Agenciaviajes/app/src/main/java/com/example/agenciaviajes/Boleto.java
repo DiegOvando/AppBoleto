@@ -2,13 +2,13 @@ package com.example.agenciaviajes;
 
 public class Boleto {
     //Atributos
-    public int noBoleto;
-    public String fecha;
-    public String nombreCliente;
-    public String destino;
-    public int tipoViaje;
-    public float precio;
-    public float descuento;
+    private int noBoleto;
+    private String fecha;
+    private String nombreCliente;
+    private String destino;
+    private int tipoViaje;
+    private float precio;
+    private float descuento;
     //Constructores
 
     //Constructor vacío

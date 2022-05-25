@@ -32,7 +32,8 @@
                 <EditText
                     android:id="@+id/txtNum"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:inputType="number">
                 </EditText>
                 <TextView
                     android:layout_width="match_parent"
@@ -65,7 +66,8 @@
                 <EditText
                     android:id="@+id/txtEdad"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:inputType="number">
                 </EditText>
                 <TextView
                     android:layout_width="match_parent"
@@ -100,13 +102,20 @@
                 <EditText
                     android:id="@+id/txtCosto"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:inputType="number">
                 </EditText>
                 <Button
                     android:id="@+id/btnGenerar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text=" Generar boleto ">
+                </Button>
+                <Button
+                    android:id="@+id/btnCerrar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Cerrar ">
                 </Button>
 
                 //Impresion de datos

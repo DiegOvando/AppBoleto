@@ -2,7 +2,9 @@ package com.example.agenciaviajes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     Boleto boleto = new Boleto();
 
     private Button btnBoleto;
+    private Button btnCerrar;
     private Spinner spnDestinos;
     private Spinner spnTipo;
     private TextView lblBoleto;
@@ -139,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
         });
         //Funcion de Botton------------------------------------------------------------------------------------
         btnBoleto = (Button) findViewById(R.id.btnGenerar);
+        btnCerrar = (Button)findViewById(R.id.btnCerrar);
         lblBoleto = (TextView) findViewById(R.id.lblBoleto);
         txtNum = (EditText) findViewById(R.id.txtNum);
         lblNum = (TextView) findViewById(R.id.lblNum);
@@ -175,12 +179,12 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,"Favor de ingresar el nombre",
                             Toast.LENGTH_SHORT).show();
                 }
-                if(txtCosto.getText().toString().matches("")){
-                    Toast.makeText(MainActivity.this,"Favor de ingresar el precio",
-                            Toast.LENGTH_SHORT).show();
-                }
                 if(txtEdad.getText().toString().matches("")){
                     Toast.makeText(MainActivity.this,"Favor de ingresar la edad",
+                            Toast.LENGTH_SHORT).show();
+                }
+                if(txtCosto.getText().toString().matches("")){
+                    Toast.makeText(MainActivity.this,"Favor de ingresar el precio",
                             Toast.LENGTH_SHORT).show();
                 }
                 else {
@@ -207,6 +211,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        btnCerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder confirmar = new AlertDialog.Builder(MainActivity.this);
+                confirmar.setTitle("¿Cerrar App?");
+                confirmar.setMessage("Se descartara toda la informacion. ");
+                confirmar.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                });
+                confirmar.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //Nada
+                    }
+                }); confirmar.show();
+            }
+        });
     }
 }
